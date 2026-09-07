@@ -5,7 +5,8 @@ updated: 2026-09-06 12:00:00
 description: 一篇用于预览博客排版的示例文章。
 categories: [示例]
 tags: [示例]
-comments: false
+comments:
+  enabled: false
 ---
 
 > 示例文章：用于预览博客的排版和阅读效果，正式发布前可以替换或删除。

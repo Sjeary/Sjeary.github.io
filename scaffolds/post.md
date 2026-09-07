@@ -4,5 +4,6 @@ date: {{ date }}
 description:
 categories:
 tags:
-comments: false
+comments:
+  enabled: false
 ---

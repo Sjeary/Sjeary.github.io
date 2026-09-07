@@ -1,29 +1,28 @@
 ---
 title: Sjeary 的个人主页
 description: 认识 Sjeary，阅读博客与近期记录。
-subtitle: 个人介绍 · 博客 · 日常记录
-header: true
 breadcrumb: false
 layout: page
-menu_id: home
+collection:
+  profile: wiki
+  id: sjeary
+active_menu: home
+banner:
+  enabled: false
 permalink: /
-seo_title: Sjeary · 个人主页与博客
 date: 2026-09-06 12:00:00
-comments: false
 ---
-
-{% navbar active:/ [主页](/) [关于我](/about/) [博客](/blog/) %}
-
-## 你好，我是 Sjeary
 
 欢迎来到我的个人空间。
 
-这里有我的个人介绍，也会收录博客文章与日常记录。
+## 认识我
 
-[进一步认识我 →](/about/)
+关于我的经历、正在做的事，以及联系方式。
 
-## 最近更新
+{% navbar [查看个人介绍](/about/) %}
 
-{% sjeary_recent_posts %}
+## 博客与记录
 
-[查看全部文章 →](/blog/)
+收录文章、笔记与日常记录。
+
+{% navbar [阅读博客](/blog/) [分类](/categories/) [标签](/tags/) [归档](/archives/) %}

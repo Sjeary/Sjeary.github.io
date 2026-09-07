@@ -1,0 +1,47 @@
+name: Sjeary
+headline: 你好，我是 Sjeary
+tagline: 个人主页与博客
+description: 欢迎来到我的个人空间。这里收录个人介绍、博客文章与日常记录。
+route:
+  path: /
+visibility:
+  listed: false
+leftbar:
+  brand:
+    source: site
+  menu:
+    - id: home
+      title: 主页
+      icon: example:planet
+      url: /
+    - id: about
+      title: 关于我
+      icon: default:profile
+      url: /about/
+    - id: post
+      title: 博客
+      icon: default:documents
+      url: /blog/
+    - type: search
+navigation:
+  tree:
+    个人空间:
+      - /
+      - about
+hero:
+  enabled: true
+  background:
+    effect:
+      type: galaxy
+  actions:
+    - title: 关于我
+      url: /about/
+      icon: default:profile
+    - title: 阅读博客
+      url: /blog/
+      icon: default:documents
+footer:
+  license: false
+  share: false
+comments:
+  enabled: false

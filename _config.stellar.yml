@@ -1,63 +1,59 @@
-logo:
-  avatar: '[/assets/avatar.svg](/about/)'
-  title: '[Sjeary](/)'
-  subtitle: 个人主页与博客
-
-menubar:
-  items:
+leftbar:
+  brand:
+    image:
+      src: /assets/avatar.svg
+      variant: avatar
+    name: Sjeary
+    tagline: 个人主页与博客
+    href: /
+  menu:
     - id: home
       title: 主页
       icon: example:planet
       url: /
-      theme: '#1BCDFC'
     - id: about
       title: 关于我
-      icon: default:shield-user
+      icon: default:profile
       url: /about/
-      theme: '#3DC550'
     - id: post
       title: 博客
       icon: default:documents
       url: /blog/
-      theme: '#FA6400'
+    - type: search
 
-site_tree:
+profiles:
   home:
-    leftbar: sjeary, recent
-    rightbar: toc
-  index_blog:
-    base_dir: blog
-    menu_id: post
-    leftbar: sjeary, recent
-    rightbar: null
-  page:
-    leftbar: sjeary, recent
-    rightbar: toc
+    active_menu: home
+  blog_index:
+    path: /blog/
+    listing_nav:
+      enabled: true
+  wiki_index:
+    path: null
+  wiki:
+    leftbar:
+      widgets: [tree, recent]
+    rightbar:
+      widgets: [toc]
   post:
-    leftbar: recent
-    rightbar: toc
+    leftbar:
+      widgets: [recent]
+    rightbar:
+      widgets: [toc]
 
-search:
-  service: local_search
-comments:
-  service: null
 article:
-  license: ''
-  share: []
+  footer:
+    license: false
+    share: []
 footer:
   content: |
-    © 2026 Sjeary · 由 [Hexo](https://hexo.io/) 与 [Stellar](https://github.com/xaoxuu/hexo-theme-stellar) 驱动。
-plugins:
-  preload:
-    enable: false
-  scrollreveal:
-    enable: false
-  swiper:
-    enable: false
-style:
-  prefers_theme: auto
-  font-size:
-    root: 16px
-    codeblock: 0.875rem
-default:
-  avatar: /assets/avatar.svg
+    © 2026 Sjeary · 由 [Hexo](https://hexo.io/) 与 [Stellar {theme.version}]({theme.tree}) 驱动。
+
+appearance:
+  preset: card
+  typography:
+    font_family:
+      body: '"LXGW WenKai Screen", system-ui, "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif'
+
+inject:
+  head_end: '<link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont/style.css">'

@@ -1,6 +1,6 @@
 # Sjeary 的个人网站
 
-使用 Hexo 8.1.2 与 Stellar 1.44.0 正式版，包含独立主页、个人介绍和博客。内容通过 Markdown 维护，主题通过 npm 安装并锁定版本。主题源码保持原样。
+使用 Hexo 8.1.2 与 Stellar 2.0.0-rc.1，包含独立主页、个人介绍和博客。主题版本与用户指定的 Stellar 官网展示页一致。内容通过 Markdown 维护，主题通过 npm 安装并锁定版本。主题源码保持原样。
 
 ## 本地预览
 
@@ -22,7 +22,9 @@ npm run dev
 | 博客文章 | `source/_posts/` |
 | 网站名称、域名、时区 | `_config.yml` |
 | 导航、主题颜色、侧栏布局 | `_config.stellar.yml` |
-| 侧栏文字 | `source/_data/widgets.yml` |
+| 原生星空封面与个人页面目录 | `source/_data/wiki/sjeary.yml` |
+| 最近更新数量 | `source/_data/widgets.yml` |
+| 封面按钮文案 | `scripts/labels.js`（仅通过 Hexo 多语言接口替换文字） |
 | 昵称头像 | `source/assets/avatar.svg` |
 
 首次预览使用昵称 Sjeary，不包含未经确认的经历或联系方式。“关于我”的待补充内容和博客示例需在正式发布前确认或替换。
@@ -43,11 +45,11 @@ npm run new:post -- "文章标题"
 - `/blog/YYYY/MM/文章名/`：文章。
 - 分类、标签与归档页由 Hexo / Stellar 生成。
 
-主页和博客列表是不同页面。`index_generator.path: blog` 负责博客列表，`source/index.md` 的 `permalink: /` 负责根路径主页，请保留该设置。主页“最近更新”自动显示最新的三篇已发布文章。
+主页和博客列表是不同页面。`index_generator.path: blog` 负责博客列表，`source/index.md` 的 `permalink: /` 负责根路径主页，请保留该设置。侧栏使用主题自带的最近更新组件。
 
-页面使用 Stellar 原生标题、导航标签、目录、文章卡片和配色，没有额外的首页样式表。`scripts/home.js` 仅注册自动文章列表标签，并复用 Stellar 的卡片样式；修改这个脚本后需重新启动预览服务。日常编辑 Markdown 后刷新浏览器即可查看。
+主页直接启用 Stellar 自带的 Wiki Hero 和 Galaxy 星空效果，个人介绍复用同一套原生内容布局；博客使用主题自带的列表与文章模板。配色、导航、目录、卡片和字体配置对照官网展示页，未编写或覆盖 UI 模板、CSS 或 JavaScript。日常编辑 Markdown 后刷新浏览器即可查看。
 
-较窄的窗口会触发 Stellar 原生移动布局，侧栏收进右下角菜单。主页和关于页已开启移动端站点标识，并使用原生页内导航。
+较窄的窗口会触发 Stellar 原生移动布局，侧栏收进菜单。
 
 ## 构建与上线
 
@@ -63,10 +65,10 @@ npm run build
 
 ## 主题说明
 
-Stellar 官网目前还提供新版本文档；本项目固定使用 npm 的正式发布版 1.44.0。升级时先核对对应版本的配置文档，在本地确认后再上线。
+本项目固定使用官网展示页标注的 `2.0.0-rc.1` 候选版本。配置已迁移到 v2 格式。可用 `npx hexo stellar doctor` 检查配置，升级时先核对对应版本的文档，在本地确认后再上线。
 
 - [Hexo 文档](https://hexo.io/zh-cn/docs/)
 - [Stellar 文档](https://xaoxuu.com/wiki/stellar/)
-- [Stellar 1.44.0 默认配置](https://github.com/xaoxuu/hexo-theme-stellar/blob/1.44.0/_config.yml)
+- [Stellar 2.0.0-rc.1 默认配置](https://github.com/xaoxuu/hexo-theme-stellar/blob/2.0.0-rc.1/_config.yml)
 
 Stellar 使用 MIT 许可证；主题及依赖的许可证随 npm 包提供。页面底部保留 Hexo / Stellar 署名。个人文章没有预先授予额外的开放许可。
