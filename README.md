@@ -20,6 +20,7 @@ npm run dev
 | 主页 | `source/index.md` |
 | 个人介绍 | `source/about/index.md` |
 | 博客文章 | `source/_posts/` |
+| 文章图示 | `source/assets/posts/` |
 | 博客原始 PDF 材料 | `source/downloads/research-notes/` |
 | 网站名称、域名、时区 | `_config.yml` |
 | 导航、主题颜色、侧栏布局 | `_config.stellar.yml` |
@@ -34,12 +35,14 @@ npm run dev
 
 | 日期 | 文章 | 分类 | 附件 |
 | --- | --- | --- | --- |
-| 2026-05-28 | 3D Gaussian Splatting | 3D 视觉 | 87 页分享材料 |
+| 2026-05-28 | 3D Gaussian Splatting：从三维高斯到可微渲染 | 3D 视觉 | 87 页分享材料 |
 | 2025-12-04 | JiT：理解大 Patch 像素空间 DiT | 扩散模型 | 95 页分享材料 |
-| 2025-08-21 | FACM：Flow-Anchored Consistency Models | 扩散模型 | 48 页理论基础、35 页论文阅读 |
+| 2025-08-21 | FACM：用瞬时速度稳定一致性模型 | 扩散模型 | 48 页理论基础、35 页论文阅读 |
 | 2025-07-17 | 扩散模型、SDE 与 Flow 基础 | 扩散模型 | 4 页学习笔记 |
 
-页面日期使用材料原始整理日期，正文也明确标注；网页正文用于梳理主题，完整推导、图示和实验讨论保留在 PDF。学习材料的原作者署名和 LLM 辅助整理说明保留在对应文章中。主页的文章入口为手动精选，发布新文章后可同步更新；侧栏最近更新、博客列表、分类、标签、归档及本地搜索由主题生成。
+四篇文章已整理成可直接阅读的 Markdown 正文，包含分节讲解、LaTeX 推导、实验表、代码或伪代码及参考资料。3DGS 的 8 张图示从原报告提取，放在对应章节并保留页码与来源；原 PDF 继续作为附件提供。文章区分论文结果、个人分析和补充推导，避免把引用结果写成个人复现实验。
+
+`date` 保留材料原始整理日期，`updated` 记录网页正文的修订日期。学习材料的原作者署名和 LLM 辅助整理说明保留在对应文章中。主页的文章入口为手动精选，发布新文章后可同步更新；侧栏最近更新、博客列表、分类、标签、归档及本地搜索由主题生成。
 
 新增文章：
 
@@ -50,6 +53,8 @@ npm run new:post -- "文章标题"
 在生成的 Markdown 文件中填写 `title`、`date`、`description`、`categories` 和 `tags`。文章正文写在第二行 `---` 分隔线之后。时区在 `_config.yml` 中设置；未来时间的文章不会提前发布。暂不发布的文章可放在 `source/_drafts/`。
 
 技术文章支持标准 LaTeX 数学语法：行内使用 `$x_t$`，独立公式使用各占一行的 `$$` 包围公式；代码块里的 `$` 保持原样。`scripts/math.js` 通过 Hexo 的官方扩展接口接入 `marked-katex-extension`，构建时生成 KaTeX HTML / MathML，样式和窄屏公式滚动使用 Stellar 自带支持。无效公式会使构建失败，避免带着错误公式发布。运行 `node --test test/math.test.cjs` 检查公式渲染。
+
+文章图片使用站内绝对路径，例如 `![图片说明](/assets/posts/3d-gaussian-splatting/pipeline.png)`；新增图片时在图下注明出处。正文代码区分可运行片段和流程伪代码，涉及模型训练的代码仍需对应依赖、数据与实验验证。
 
 ## 页面结构
 
