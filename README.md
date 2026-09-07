@@ -24,6 +24,7 @@ npm run dev
 | 导航、主题颜色、侧栏布局 | `_config.stellar.yml` |
 | 侧栏文字 | `source/_data/widgets.yml` |
 | 昵称头像 | `source/assets/avatar.svg` |
+| 主页样式 | `source/css/sjeary.css` |
 
 首次预览使用昵称 Sjeary，不包含未经确认的经历或联系方式。“关于我”的待补充内容和博客示例需在正式发布前确认或替换。
 
@@ -43,7 +44,9 @@ npm run new:post -- "文章标题"
 - `/blog/YYYY/MM/文章名/`：文章。
 - 分类、标签与归档页由 Hexo / Stellar 生成。
 
-主页和博客列表是不同页面。`index_generator.path: blog` 负责博客列表，`source/index.md` 负责根路径主页。
+主页和博客列表是不同页面。`index_generator.path: blog` 负责博客列表，`source/index.md` 的 `permalink: /` 负责根路径主页，请保留该设置。主页“最近更新”自动显示最新的三篇已发布文章。
+
+`scripts/home.js` 注册主页文章列表标签并引入样式；修改这个脚本后需重新启动预览服务。日常编辑 Markdown 后刷新浏览器即可查看。
 
 ## 构建与上线
 
