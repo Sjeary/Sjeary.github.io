@@ -46,6 +46,9 @@ article:
     license: false
     share: []
 features:
+  lightbox:
+    enabled: true
+    selector: '.md-text p > img, .timenode p > img'
   math:
     provider: katex
 footer:

@@ -54,7 +54,7 @@ npm run new:post -- "文章标题"
 
 技术文章支持标准 LaTeX 数学语法：行内使用 `$x_t$`，独立公式使用各占一行的 `$$` 包围公式；代码块里的 `$` 保持原样。`scripts/math.js` 通过 Hexo 的官方扩展接口接入 `marked-katex-extension`，构建时生成 KaTeX HTML / MathML，样式和窄屏公式滚动使用 Stellar 自带支持。无效公式会使构建失败，避免带着错误公式发布。运行 `node --test test/math.test.cjs` 检查公式渲染。
 
-文章图片使用站内绝对路径，例如 `![图片说明](/assets/posts/3d-gaussian-splatting/pipeline.png)`；新增图片时在图下注明出处。正文代码区分可运行片段和流程伪代码，涉及模型训练的代码仍需对应依赖、数据与实验验证。
+文章图片使用站内绝对路径，例如 `![图片说明](/assets/posts/3d-gaussian-splatting/pipeline.png)`；新增图片时在图下注明出处。普通 Markdown 图片已接入 Stellar 自带的灯箱，点击即可放大查看，关闭后回到原阅读位置，无需改写成主题专用标签。正文代码区分可运行片段和流程伪代码，涉及模型训练的代码仍需对应依赖、数据与实验验证。
 
 ## 页面结构
 
