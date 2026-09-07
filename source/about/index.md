@@ -1,10 +1,14 @@
 ---
 title: 关于我
 layout: page
+header: true
+breadcrumb: false
 menu_id: about
 date: 2026-09-06 12:00:00
 comments: false
 ---
+
+{% navbar active:/about/ [主页](/) [关于我](/about/) [博客](/blog/) %}
 
 你好，我是 **Sjeary**。
 
