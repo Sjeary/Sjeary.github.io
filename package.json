@@ -12,6 +12,7 @@
   },
   "hexo": { "version": "8.1.2" },
   "dependencies": {
+    "cheerio": "1.2.0",
     "hexo": "8.1.2",
     "hexo-generator-archive": "2.0.0",
     "hexo-generator-category": "2.0.0",
