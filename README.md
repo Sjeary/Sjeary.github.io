@@ -80,6 +80,10 @@ npm run build
 
 构建结果在 `public/`，可以部署到 GitHub Pages、Cloudflare Pages 或其他静态托管服务。当前项目没有设置任何远程仓库，也不会自动发布或修改 DNS。
 
+`hexo-generator-sitemap` 在构建时生成 `/sitemap.xml`，覆盖主页、个人介绍、博客列表和文章；`sitemap.xml.njk` 避免重复的主页条目并加入独立的博客列表。新文章自动加入，设置 `sitemap: false` 可排除条目。`source/robots.txt` 提供站点地图入口。页面由 `scripts/canonical.js` 补充正式网址标记，复用主题的 Open Graph URL；设置、404 和归档等 `noindex` 页面保持不索引。不启用 Stellar 的域名克隆检查，因此本地及托管预览地址不会出现克隆站提示。更换主域名时需同时更新 `_config.yml` 的 `url` 和 `source/robots.txt`。
+
+运行 `node --test --test-concurrency=1 test/*.test.cjs` 检查公式、搜索摘要和 SEO 输出。测试按文件串行运行，避免多个 Hexo 实例同时写本地缓存。
+
 绑定 `sjeary.com` 时，先在选定的托管平台添加自定义域名，再按该平台给出的要求修改 DNS 记录并启用 HTTPS。将 `www.sjeary.com` 重定向到主域名。不要删除不相关的邮箱或子域名记录。
 
 如果选用 GitHub Pages，需先确定目标 GitHub 仓库，在仓库中配置 Pages 的构建发布流程。自定义域名填 `sjeary.com`，DNS 记录按 [GitHub 官方说明](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site) 配置。
