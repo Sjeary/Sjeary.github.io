@@ -49,6 +49,8 @@ npm run new:post -- "文章标题"
 
 在生成的 Markdown 文件中填写 `title`、`date`、`description`、`categories` 和 `tags`。文章正文写在第二行 `---` 分隔线之后。时区在 `_config.yml` 中设置；未来时间的文章不会提前发布。暂不发布的文章可放在 `source/_drafts/`。
 
+技术文章支持标准 LaTeX 数学语法：行内使用 `$x_t$`，独立公式使用各占一行的 `$$` 包围公式；代码块里的 `$` 保持原样。`scripts/math.js` 通过 Hexo 的官方扩展接口接入 `marked-katex-extension`，构建时生成 KaTeX HTML / MathML，样式和窄屏公式滚动使用 Stellar 自带支持。无效公式会使构建失败，避免带着错误公式发布。运行 `node --test test/math.test.cjs` 检查公式渲染。
+
 ## 页面结构
 
 - `/`：个人主页。
@@ -59,7 +61,7 @@ npm run new:post -- "文章标题"
 
 主页和博客列表是不同页面。`index_generator.path: blog` 负责博客列表，`source/index.md` 的 `permalink: /` 负责根路径主页，请保留该设置。侧栏使用主题自带的最近更新组件。
 
-主页直接启用 Stellar 自带的 Wiki Hero 和 Galaxy 星空效果，个人介绍复用同一套原生内容布局；博客使用主题自带的列表与文章模板。配色、导航、目录、卡片和字体配置对照官网展示页，未编写或覆盖 UI 模板、CSS 或 JavaScript。日常编辑 Markdown 后刷新浏览器即可查看。
+主页直接启用 Stellar 自带的 Wiki Hero 和 Galaxy 星空效果，个人介绍复用同一套原生内容布局；博客使用主题自带的列表与文章模板。配色、导航、目录、卡片和字体配置对照官网展示页，未修改主题 UI 模板、CSS 或浏览器交互。日常编辑 Markdown 后刷新浏览器即可查看。
 
 较窄的窗口会触发 Stellar 原生移动布局，侧栏收进菜单。
 

@@ -19,6 +19,8 @@
     "hexo-generator-tag": "2.0.0",
     "hexo-renderer-marked": "7.0.1",
     "hexo-server": "3.0.0",
-    "hexo-theme-stellar": "2.0.0-rc.1"
+    "hexo-theme-stellar": "2.0.0-rc.1",
+    "katex": "0.16.23",
+    "marked-katex-extension": "5.1.12"
   }
 }

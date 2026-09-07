@@ -45,6 +45,9 @@ article:
   footer:
     license: false
     share: []
+features:
+  math:
+    provider: katex
 footer:
   content: |
     © 2026 Sjeary · 由 [Hexo](https://hexo.io/) 与 [Stellar {theme.version}]({theme.tree}) 驱动。
