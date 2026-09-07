@@ -37,4 +37,9 @@ date: 2026-09-06 12:00:00
 
 记录扩散模型、Flow Matching、DiT 与 3D 视觉的学习过程，分享论文阅读和技术报告。
 
+- **2026.05.28** · [3D Gaussian Splatting](/blog/2026/05/3d-gaussian-splatting/)：从高斯表示到可微渲染与优化。
+- **2025.12.04** · [JiT：理解大 Patch 像素空间 DiT](/blog/2025/12/jit-pixel-dit/)：预测目标、流形解释与实验。
+- **2025.08.21** · [FACM：Flow-Anchored Consistency Models](/blog/2025/08/facm/)：连接 Flow Matching 与一致性模型。
+- **2025.07.17** · [扩散模型、SDE 与 Flow 基础](/blog/2025/07/diffusion-sde-flow/)：从随机过程到生成模型。
+
 {% navbar [阅读博客](/blog/) [分类](/categories/) [标签](/tags/) [归档](/archives/) %}

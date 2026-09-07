@@ -20,6 +20,7 @@ npm run dev
 | 主页 | `source/index.md` |
 | 个人介绍 | `source/about/index.md` |
 | 博客文章 | `source/_posts/` |
+| 博客原始 PDF 材料 | `source/downloads/research-notes/` |
 | 网站名称、域名、时区 | `_config.yml` |
 | 导航、主题颜色、侧栏布局 | `_config.stellar.yml` |
 | 原生星空封面与个人页面目录 | `source/_data/wiki/sjeary.yml` |
@@ -28,6 +29,17 @@ npm run dev
 | 昵称头像 | `source/assets/avatar.svg` |
 
 主页和个人介绍已根据已有简历及 GitHub 个人介绍整理，包含教育背景、TGAC 2025 竞赛、开源项目和技术兴趣。联系入口使用 GitHub。更新个人经历时同步检查主页摘要与“关于我”正文。
+
+博客迁入了 [Research-Notes](https://github.com/Sjeary/Research-Notes) 中的四篇学习笔记与技术分享，保留原始日期、参考资料及五份未经修改的 PDF：
+
+| 日期 | 文章 | 分类 | 附件 |
+| --- | --- | --- | --- |
+| 2026-05-28 | 3D Gaussian Splatting | 3D 视觉 | 87 页分享材料 |
+| 2025-12-04 | JiT：理解大 Patch 像素空间 DiT | 扩散模型 | 95 页分享材料 |
+| 2025-08-21 | FACM：Flow-Anchored Consistency Models | 扩散模型 | 48 页理论基础、35 页论文阅读 |
+| 2025-07-17 | 扩散模型、SDE 与 Flow 基础 | 扩散模型 | 4 页学习笔记 |
+
+页面日期使用材料原始整理日期，正文也明确标注；网页正文用于梳理主题，完整推导、图示和实验讨论保留在 PDF。学习材料的原作者署名和 LLM 辅助整理说明保留在对应文章中。主页的文章入口为手动精选，发布新文章后可同步更新；侧栏最近更新、博客列表、分类、标签、归档及本地搜索由主题生成。
 
 新增文章：
 
