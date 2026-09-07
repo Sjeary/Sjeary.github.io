@@ -4,7 +4,7 @@ leftbar:
       src: /assets/avatar.svg
       variant: avatar
     name: Sjeary
-    tagline: 个人主页与博客
+    tagline: 申家芮 · 北京理工大学
     href: /
   menu:
     - id: home

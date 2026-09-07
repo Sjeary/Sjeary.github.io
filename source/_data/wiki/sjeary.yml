@@ -1,7 +1,7 @@
 name: Sjeary
 headline: 你好，我是 Sjeary
-tagline: 个人主页与博客
-description: 欢迎来到我的个人空间。这里收录个人介绍、博客文章与日常记录。
+tagline: 申家芮 · 北京理工大学
+description: 计算机硕士研究生，关注 3D 视觉、自动驾驶与扩散模型。分享学习笔记、技术报告和开源项目。
 route:
   path: /
 visibility:
