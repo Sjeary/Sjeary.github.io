@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "hexo server --ip 127.0.0.1 --port 4000",
     "build": "hexo clean && hexo generate",
+    "build:site": "hexo clean --config _config.yml,_config.sites.yml && hexo generate --config _config.yml,_config.sites.yml",
     "clean": "hexo clean",
     "new:post": "hexo new post"
   },
