@@ -1,0 +1,52 @@
+title: Sjeary
+subtitle: 个人主页与博客
+description: 申家芮（Sjeary）的个人主页与博客。北京理工大学计算机硕士研究生，关注 3D 视觉、自动驾驶与扩散模型。
+author: 申家芮 / Sjeary
+avatar: /assets/avatar.svg
+favicon: /assets/avatar.svg
+language: zh-CN
+timezone: America/Los_Angeles
+url: https://sjeary.com
+root: /
+permalink: blog/:year/:month/:title/
+pretty_urls:
+  trailing_index: false
+  trailing_html: false
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+new_post_name: :title.md
+default_layout: post
+external_link:
+  enable: true
+  field: site
+  exclude: []
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: false
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace: '  '
+prismjs:
+  enable: false
+index_generator:
+  path: blog
+  per_page: 10
+  order_by: -date
+pagination_dir: page
+per_page: 10
+theme: stellar
+sitemap:
+  path: sitemap.xml
+  template: sitemap.xml.njk
+  tags: false
+  categories: false
+deploy:
+  type: ''

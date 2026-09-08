@@ -1,0 +1,10 @@
+node_modules/
+public/
+dist/
+db.json
+_multiconfig.yml
+.DS_Store
+*.log
+.env
+.env.*
+!.env.example

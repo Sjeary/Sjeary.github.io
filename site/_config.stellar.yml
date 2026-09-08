@@ -1,0 +1,65 @@
+leftbar:
+  brand:
+    image:
+      src: /assets/avatar.svg
+      variant: avatar
+    name: Sjeary
+    tagline: 申家芮 · 北京理工大学
+    href: /
+  menu:
+    - id: home
+      title: 主页
+      icon: example:planet
+      url: /
+    - id: about
+      title: 关于我
+      icon: default:profile
+      url: /about/
+    - id: post
+      title: 博客
+      icon: default:documents
+      url: /blog/
+    - type: search
+
+profiles:
+  home:
+    active_menu: home
+  blog_index:
+    path: /blog/
+    listing_nav:
+      enabled: true
+  wiki_index:
+    path: null
+  wiki:
+    leftbar:
+      widgets: [tree, recent]
+    rightbar:
+      widgets: [toc]
+  post:
+    leftbar:
+      widgets: [recent]
+    rightbar:
+      widgets: [toc]
+
+article:
+  footer:
+    license: false
+    share: []
+features:
+  lightbox:
+    enabled: true
+    selector: '.md-text p > img, .timenode p > img'
+  math:
+    provider: katex
+footer:
+  content: |
+    © 2026 Sjeary · 由 [Hexo](https://hexo.io/) 与 [Stellar {theme.version}]({theme.tree}) 驱动。
+
+appearance:
+  preset: card
+  typography:
+    font_family:
+      body: '"LXGW WenKai Screen", system-ui, "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif'
+
+inject:
+  head_end: '<link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont/style.css">'

@@ -1,0 +1,47 @@
+name: Sjeary
+headline: 你好，我是 Sjeary
+tagline: 申家芮 · 北京理工大学
+description: 计算机硕士研究生，关注 3D 视觉、自动驾驶与扩散模型。分享学习笔记、技术报告和开源项目。
+route:
+  path: /
+visibility:
+  listed: false
+leftbar:
+  brand:
+    source: site
+  menu:
+    - id: home
+      title: 主页
+      icon: example:planet
+      url: /
+    - id: about
+      title: 关于我
+      icon: default:profile
+      url: /about/
+    - id: post
+      title: 博客
+      icon: default:documents
+      url: /blog/
+    - type: search
+navigation:
+  tree:
+    个人空间:
+      - /
+      - about
+hero:
+  enabled: true
+  background:
+    effect:
+      type: galaxy
+  actions:
+    - title: 关于我
+      url: /about/
+      icon: default:profile
+    - title: 阅读博客
+      url: /blog/
+      icon: default:documents
+footer:
+  license: false
+  share: false
+comments:
+  enabled: false

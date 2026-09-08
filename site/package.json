@@ -1,0 +1,28 @@
+{
+  "name": "sjeary-site",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Sjeary 的个人主页与博客，基于 Hexo 和 Stellar。",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "dev": "hexo server --ip 127.0.0.1 --port 4000",
+    "build": "hexo clean && hexo generate",
+    "clean": "hexo clean",
+    "new:post": "hexo new post"
+  },
+  "hexo": { "version": "8.1.2" },
+  "dependencies": {
+    "cheerio": "1.2.0",
+    "hexo": "8.1.2",
+    "hexo-generator-archive": "2.0.0",
+    "hexo-generator-category": "2.0.0",
+    "hexo-generator-index": "4.0.0",
+    "hexo-generator-sitemap": "3.0.1",
+    "hexo-generator-tag": "2.0.0",
+    "hexo-renderer-marked": "7.0.1",
+    "hexo-server": "3.0.0",
+    "hexo-theme-stellar": "2.0.0-rc.1",
+    "katex": "0.16.23",
+    "marked-katex-extension": "5.1.12"
+  }
+}
