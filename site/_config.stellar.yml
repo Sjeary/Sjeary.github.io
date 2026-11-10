@@ -1,7 +1,7 @@
 leftbar:
   brand:
     image:
-      src: /assets/avatar.svg
+      src: /assets/avatar.jpg
       variant: avatar
     name: Sjeary
     tagline: 申家芮 · 北京理工大学

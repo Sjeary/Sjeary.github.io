@@ -27,7 +27,7 @@ npm run dev
 | 原生星空封面与个人页面目录 | `source/_data/wiki/sjeary.yml` |
 | 最近更新数量 | `source/_data/widgets.yml` |
 | 封面按钮文案 | `scripts/labels.js`（仅通过 Hexo 多语言接口替换文字） |
-| 昵称头像 | `source/assets/avatar.svg` |
+| 个人头像与标签图标 | `source/assets/avatar.jpg`、`source/assets/favicon.png` |
 
 主页和个人介绍已根据已有简历及 GitHub 个人介绍整理，包含教育背景、TGAC 2025 竞赛、开源项目和技术兴趣。联系入口使用 GitHub。更新个人经历时同步检查主页摘要与“关于我”正文。
 
